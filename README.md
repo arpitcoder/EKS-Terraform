@@ -67,11 +67,11 @@ View the logs and monitor the status of the deployment from the web UI.
 # Environment Variables
 The application requires the following environment variables to be set:
 
-# AWS_ACCESS_KEY_ID: Your AWS access key.
-# AWS_SECRET_ACCESS_KEY: Your AWS secret key.
-# AWS_DEFAULT_REGION: The AWS region for the EKS cluster.
-# DOCKER_REGISTRY_URL: The URL of your Docker registry (e.g., ECR, Docker Hub).
-# KUBE_CONFIG_PATH: The path to the kubeconfig file to interact with your Kubernetes cluster.
+AWS_ACCESS_KEY_ID: Your AWS access key.
+AWS_SECRET_ACCESS_KEY: Your AWS secret key.
+AWS_DEFAULT_REGION: The AWS region for the EKS cluster.
+DOCKER_REGISTRY_URL: The URL of your Docker registry (e.g., ECR, Docker Hub).
+KUBE_CONFIG_PATH: The path to the kubeconfig file to interact with your Kubernetes cluster.
 # Example Workflow
 Git Checkout: The application checks out the latest code from the specified Git branch.
 Build: Builds the source code and creates a Docker image using the provided Dockerfile.
