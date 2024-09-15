@@ -1,13 +1,13 @@
-# EKS-Terraform
+EKS-Terraform
 EKS Deployment Automation Tool
 This project provides a hassle-free solution for deploying Amazon Elastic Kubernetes Service (EKS) clusters, automating the process of git checkout, building code, creating Docker images, pushing them to a registry, and deploying to the EKS cluster. The tool simplifies the infrastructure setup and deployment pipeline, making it easier for developers and DevOps teams to focus on application development and scaling.
 
 Features
 Automated EKS Cluster Setup: Deploys and configures an EKS cluster on AWS with minimal manual steps.
 Continuous Integration/Deployment: Automatically checks out code from Git, builds Docker images, and pushes them to a container registry (e.g., ECR, Docker Hub).
-Kubernetes Deployment: Deploys your Docker images to the EKS cluster seamlessly.
+Kubernetes Deployment: Seamlessly deploy your Docker images to the EKS cluster.
 Customizable Deployment: Supports custom deployment configurations using Kubernetes YAML files.
-Scalable: Designed for production-grade EKS clusters with high availability and scalability in mind.
+Scalable: Designed for production-grade EKS clusters with high availability and scalability.
 Prerequisites
 Before you begin, ensure you have the following:
 
@@ -46,23 +46,23 @@ Copy code
 aws eks update-kubeconfig --name <cluster-name> --region <aws-region>
 Usage
 Provision EKS Cluster:
-
 If you're using Terraform to provision the EKS cluster, run:
+
 bash
 Copy code
 cd terraform
 terraform init
 terraform apply
-Trigger Build and Deploy Pipeline: Use the web interface or the command line to trigger the pipeline:
-
-From the web UI:
+Trigger Build and Deploy Pipeline:
+From the Web UI:
 Provide the Git repository URL, branch name, Docker image tag, and other necessary details.
 Click "Start Deployment" to trigger the pipeline.
-From the command line:
+From the Command Line:
 bash
 Copy code
 python deploy.py --repo <repo-url> --branch <branch> --image <image-name> --tag <tag>
-Monitor Deployment: View the logs and monitor the status of the deployment from the web UI.
+Monitor Deployment:
+View the logs and monitor the status of the deployment from the web UI.
 
 Environment Variables
 The application requires the following environment variables to be set:
@@ -93,5 +93,4 @@ Contributions are welcome! Please submit pull requests or open issues for any fe
 
 License
 This project is licensed under the MIT License.
-
 
