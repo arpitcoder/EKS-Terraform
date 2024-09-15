@@ -1,4 +1,4 @@
-EKS-Terraform
+# EKS-Terraform
 EKS Deployment Automation Tool
 This project provides a hassle-free solution for deploying Amazon Elastic Kubernetes Service (EKS) clusters, automating the process of git checkout, building code, creating Docker images, pushing them to a registry, and deploying to the EKS cluster. The tool simplifies the infrastructure setup and deployment pipeline, making it easier for developers and DevOps teams to focus on application development and scaling.
 
