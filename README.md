@@ -1,14 +1,14 @@
 # EKS-Terraform
-EKS Deployment Automation Tool
+# EKS Deployment Automation Tool
 This project provides a hassle-free solution for deploying Amazon Elastic Kubernetes Service (EKS) clusters, automating the process of git checkout, building code, creating Docker images, pushing them to a registry, and deploying to the EKS cluster. The tool simplifies the infrastructure setup and deployment pipeline, making it easier for developers and DevOps teams to focus on application development and scaling.
 
-Features
+#Features
 Automated EKS Cluster Setup: Deploys and configures an EKS cluster on AWS with minimal manual steps.
 Continuous Integration/Deployment: Automatically checks out code from Git, builds Docker images, and pushes them to a container registry (e.g., ECR, Docker Hub).
 Kubernetes Deployment: Seamlessly deploy your Docker images to the EKS cluster.
 Customizable Deployment: Supports custom deployment configurations using Kubernetes YAML files.
 Scalable: Designed for production-grade EKS clusters with high availability and scalability.
-Prerequisites
+#Prerequisites
 Before you begin, ensure you have the following:
 
 AWS CLI: Set up the AWS CLI with the required permissions to manage EKS.
@@ -17,14 +17,14 @@ Docker: Docker installed to build and manage container images.
 Terraform (optional): Use Terraform to automate EKS cluster provisioning.
 Python or Node.js: For the backend services, which handle the automation tasks.
 AWS IAM Permissions: Sufficient AWS IAM permissions to create and manage EKS, EC2, VPC, and other related services.
-Installation
+#Installation
 Clone the Repository:
 
 bash
 Copy code
 git clone <repo-url>
 cd eks-deployment-tool
-Install Dependencies:
+#Install Dependencies:
 
 Python:
 bash
@@ -43,9 +43,9 @@ Configure Kubernetes: Install and configure kubectl to access the EKS cluster.
 
 bash
 Copy code
-aws eks update-kubeconfig --name <cluster-name> --region <aws-region>
+a3ws eks update-kubeconfig --name <cluster-name> --region <aws-region>
 Usage
-Provision EKS Cluster:
+#Provision EKS Cluster:
 If you're using Terraform to provision the EKS cluster, run:
 
 bash
@@ -64,20 +64,20 @@ python deploy.py --repo <repo-url> --branch <branch> --image <image-name> --tag 
 Monitor Deployment:
 View the logs and monitor the status of the deployment from the web UI.
 
-Environment Variables
+#Environment Variables
 The application requires the following environment variables to be set:
 
-AWS_ACCESS_KEY_ID: Your AWS access key.
-AWS_SECRET_ACCESS_KEY: Your AWS secret key.
-AWS_DEFAULT_REGION: The AWS region for the EKS cluster.
-DOCKER_REGISTRY_URL: The URL of your Docker registry (e.g., ECR, Docker Hub).
-KUBE_CONFIG_PATH: The path to the kubeconfig file to interact with your Kubernetes cluster.
-Example Workflow
+#AWS_ACCESS_KEY_ID: Your AWS access key.
+#AWS_SECRET_ACCESS_KEY: Your AWS secret key.
+#AWS_DEFAULT_REGION: The AWS region for the EKS cluster.
+#DOCKER_REGISTRY_URL: The URL of your Docker registry (e.g., ECR, Docker Hub).
+#KUBE_CONFIG_PATH: The path to the kubeconfig file to interact with your Kubernetes cluster.
+#Example Workflow
 Git Checkout: The application checks out the latest code from the specified Git branch.
 Build: Builds the source code and creates a Docker image using the provided Dockerfile.
 Push to Registry: Tags and pushes the Docker image to the configured container registry.
 Deploy to EKS: Deploys the Docker image to the EKS cluster using kubectl and a Kubernetes deployment YAML file.
-Configuration
+#Configuration
 Dockerfile: Ensure your project has a valid Dockerfile for building the application.
 Kubernetes YAML: Customize the Kubernetes deployment YAML file located in k8s/deployment.yaml.
 Troubleshooting
@@ -88,7 +88,7 @@ bash
 Copy code
 kubectl get pods
 kubectl logs <pod-name>
-Contributing
+#Contributing
 Contributions are welcome! Please submit pull requests or open issues for any features or bugs.
 
 License
