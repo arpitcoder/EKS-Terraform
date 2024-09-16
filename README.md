@@ -10,7 +10,9 @@ This project provides a hassle-free solution for deploying Amazon Elastic Kubern
 Scalable: Designed for production-grade EKS clusters with high availability and scalability.
 # Prerequisites
 Before you begin, ensure you have the following:
-
+`Ensure your AWS credentials are properly configured either via ~/.aws/credentials or environment variables.`
+`export AWS_ACCESS_KEY_ID="your-access-key"`
+`export AWS_SECRET_ACCESS_KEY="your-secret-key"`
 `AWS CLI:` Set up the AWS CLI with the required permissions to manage EKS.
 `kubectl:` Install and configure kubectl to interact with your Kubernetes clusters.
 `Docker:` Docker installed to build and manage container images.
@@ -45,9 +47,9 @@ Node.js:
 
 If you're using Terraform to provision the EKS cluster, run:
 
-`cd terraform`
-`terraform init`
-`terraform apply`
+`cd EKS-TERRAFORM`
+`terragrunt init`
+`terragrunt apply`
 Trigger Build and Deploy Pipeline:
 From the Web UI:
 Provide the Git repository URL, branch name, Docker image tag, and other necessary details.
